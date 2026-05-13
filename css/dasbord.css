@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* BODY */
+
+.dashboard-page {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background-image: url("../dasborfoto/bacground.JPG");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    overflow: hidden;
+}
+
+
+/* ANIMASI TITLE */
+
+.welcome-title {
+    animation: fadeZoom 4s ease;
+}
+
+
+/* ANIMASI PARAGRAF */
+
+.slide-section p {
+    animation: fadeUp 5s ease;
+}
+
+
+/* ANIMASI HALAMAN */
+
+.slide-section.active {
+    display: block;
+    animation: fadePage 1.5s ease;
+}
+
+
+/* KEYFRAMES */
+
+@keyframes fadeZoom {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadePage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* HEADER */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.logo h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+
+/* NAVIGATION */
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #38bdf8;
+}
+
+
+/* MAIN */
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    padding-top: 200px;
+}
+
+
+/* SLIDE */
+
+.slide-section {
+    display: none;
+    width: 100%;
+}
+
+
+/* TITLE */
+
+.welcome-title {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+
+/* PARAGRAF */
+
+.slide-section p {
+    font-size: 38px;
+    font-style: italic;
+    color: white;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+}
+
+
+/* CONTENT */
+
+.content-section {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    flex-wrap: wrap;
+}
+
+.content-section h2 {
+    display: none;
+}
+
+.content-section ul {
+    display: contents;
+}
+
+.content-section ul li {
+    list-style: none;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.content-section ul li:hover {
+    color: #38bdf8;
+    transform: scale(1.05);
+}
+
+
+/* MENU BUTTON */
+
+.menu-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+
+/* BUTTON */
+
+.menu-buttons button {
+    padding: 18px 28px;
+    border: none;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease;
+    opacity: 0;
+    animation: popupButton 4s ease forwards;
+}
+
+
+/* DELAY TIAP BUTTON */
+
+.menu-buttons button:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.menu-buttons button:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.menu-buttons button:nth-child(3) {
+    animation-delay: 3s;
+}
+
+.menu-buttons button:nth-child(4) {
+    animation-delay: 4s;
+}
+
+
+/* HOVER */
+
+.menu-buttons button:hover {
+    transform: scale(1.08);
+    background: #38bdf8;
+    color: black;
+}
+
+
+/* ANIMASI MASUK */
+
+.slide-section.active {
+    display: block;
+    animation: fadePage 1s ease;
+}
+
+
+/* ANIMASI KELUAR */
+
+.slide-section.reverse {
+    animation: reversePage 0.6s ease forwards;
+}
+
+
+/* MASUK */
+
+@keyframes fadePage {
+    0% {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* KELUAR */
+
+@keyframes reversePage {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+}
+
+
+/* ANIMASI BUTTON */
+
+@keyframes popupButton {
+    0% {
+        opacity: 0;
+        transform: translateY(80px) scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+    .welcome-title {
+        font-size: 45px;
+    }
+    .slide-section p {
+        font-size: 24px;
+    }
+    nav ul {
+        gap: 20px;
+    }
+}
+
+@keyframes clickPopup {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.85);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-y: auto;
+    }
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .welcome-title {
+        font-size: 34px;
+    }
+    .slide-section p {
+        font-size: 18px;
+    }
+    .content-section {
+        gap: 25px;
+    }
+    .content-section ul li {
+        font-size: 18px;
+    }
+    .menu-buttons {
+        gap: 15px;
+    }
+    .menu-buttons button {
+        width: 90%;
+    }
+}

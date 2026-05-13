@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Kelas G</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/jadwal.css">
+    <link rel="stylesheet" href="../css/top.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="top-header">
+
+        <!-- LOGO -->
+        <div class="top-logo" onclick="window.location.href='../html/dasboard.html'">
+
+            <img src="../dasborfoto/logo.png" alt="Logo Kelas">
+
+            <h1 class="top-logo-title">
+                Welcome Too Website InnotechG
+            </h1>
+
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="top-navbar">
+
+            <ul class="top-menu">
+
+                <li>
+                    <a href="../html/dasboard.html">
+                    Beranda
+                </a>
+                </li>
+
+                <li>
+                    <a href="../html/jadwal.html">
+                    Jadwal Kelas
+                </a>
+                </li>
+
+                <li>
+                    <a href="../html/profilmember.html">
+                    Profil Member
+                </a>
+                </li>
+
+                <li>
+                    <a href="../php/tampilan.php">
+                    Dokumentasi Kelas
+                </a>
+                </li>
+
+                <li>
+                    <a href="../html/hubungikami.html">
+                    Hubungi Kami
+                </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+    <!-- CONTENT -->
+    <section class="jadwal-page">
+        <div class="content-card">
+            <div class="page-header">
+                <h1 class="page-title">
+                    Jadwal Kuliah
+                </h1>
+                <p class="page-subtitle">
+                    Pilih kelas terlebih dahulu
+                </p>
+            </div>
+
+            <!-- PILIH KELAS -->
+            <div class="form-group">
+                <select id="kelasSelect" class="select-input" onchange="tampilkanJadwal()">
+                    <option value="">
+                        -- Pilih Kelas --
+                    </option>
+                    <option value="F">
+                        Kelas F
+                    </option>
+                    <option value="E">
+                        Kelas E
+                    </option>
+                    <option value="I">
+                        Kelas I
+                    </option>
+                </select>
+            </div>
+
+            <!-- JADWAL -->
+            <div id="jadwalContainer" class="schedule-section" style="display: none;">
+                <h2 class="schedule-title" id="judulKelas">
+                </h2>
+                <div class="table-wrapper">
+                    <table class="schedule-table">
+                        <thead class="table-head">
+                            <tr>
+                                <th class="table-cell-head">Kode</th>
+                                <th class="table-cell-head">Mata Kuliah</th>
+                                <th class="table-cell-head">Kelas</th>
+                                <th class="table-cell-head">Hari</th>
+                                <th class="table-cell-head">Jam</th>
+                                <th class="table-cell-head">Ruang</th>
+                                <th class="table-cell-head">Dosen</th>
+                            </tr>
+                        </thead>
+                        <tbody id="isiJadwal">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JS -->
+    <script src="../js/jadwal.js"></script>
+
+</body>
+
+</html>

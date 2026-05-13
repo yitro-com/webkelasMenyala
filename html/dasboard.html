@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Kelas G</title>
+    <!-- CSS Buatan Sendiri -->
+    <link rel="stylesheet" href="../css/top.css">
+    <link rel="stylesheet" href="../css/dasbord.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="dashboard-page">
+    <!-- HEADER -->
+    <header class="top-header">
+
+
+        <!-- LOGO -->
+        <div class="top-logo" onclick="window.location.href='../html/dasboard.html'">
+
+
+            <img src="../dasborfoto/logo.png" alt="Logo Kelas">
+
+
+            <h1 class="top-logo-title">
+                Welcome Too Website InnotechG
+            </h1>
+
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+        <nav class="top-navbar">
+
+
+            <ul class="top-menu">
+
+
+                <li>
+                    <a href="../html/dasboard.html">
+                    Beranda
+                </a>
+                </li>
+
+
+                <li>
+                    <a href="../html/jadwal.html">
+                    Jadwal Kelas
+                </a>
+                </li>
+
+
+                <li>
+                    <a href="../html/profilmember.html">
+                    Profil Member
+                </a>
+                </li>
+
+
+                <li>
+                    <a href="../php/tampilan.php">
+                    Dokumentasi Kelas
+                </a>
+                </li>
+
+
+                <li>
+                    <a href="../html/hubungikami.html">
+                    Hubungi Kami
+                </a>
+                </li>
+
+
+            </ul>
+
+
+        </nav>
+
+
+    </header>
+    <main>
+        <!-- Slide Beranda -->
+        <section id="beranda" class="slide-section active">
+            <h1 class="welcome-title">
+                "SELAMAT DATANG DI KELUARGA BESAR INNOTECHG24"
+            </h1>
+
+            <p>
+                Kami Sangat Senang Menyambut kamu! Bersama-sama, Kita Akan Tumbuh, Belajar, Dan Mencapai Kesuksesan Yang Lebih Besar
+            </p>
+
+            <!-- MENU BUTTON -->
+            <div class="menu-buttons">
+
+                <button onclick="window.location.href='../html/jadwal.html'">
+                    Lihat Jadwal Kelas
+                </button>
+                <button onclick="openPopup('profil', this)">
+                    Lihat Profil Anggota
+                </button>
+                <button onclick="openPopup('dokumentasi', this)">
+                    Lihat Dokumentasi
+                </button>
+            </div>
+
+        </section>
+    </main>
+    <script src="../js/dasbord.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+body {
+    background: #020617;
+}
+
+
+/* PAGE */
+
+.jadwal-page {
+    padding-top: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/* CARD */
+
+.content-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* HEADER */
+
+.page-header {
+    margin-bottom: 0px;
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #1e293b;
+}
+
+.page-subtitle {
+    color: #64748b;
+    margin-top: 10px;
+}
+
+
+/* FORM */
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.input-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.select-input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #5d5d5e;
+    border-radius: 10px;
+    color: #000;
+    outline: none;
+}
+
+
+/* TABLE */
+
+.schedule-section {
+    margin-top: 0px;
+}
+
+.schedule-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 16px;
+    color: #1e293b;
+    background: #fffffe;
+    padding: 10px 14px;
+    border-radius: 8px;
+}
+
+
+/* WRAPPER TABEL */
+
+.table-wrapper {
+    max-height: 500px;
+    /* tinggi area tabel */
+    overflow-y: auto;
+    /* scroll bawah */
+    overflow-x: auto;
+    /* scroll samping */
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+}
+
+
+/* TABEL */
+
+.schedule-table {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: collapse;
+}
+
+
+/* HEADER */
+
+.table-head {
+    background: #cbbd76;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+
+/* CELL */
+
+.table-cell-head,
+.table-cell {
+    border-right: 1px solid #d1d5db;
+    padding: 14px;
+    text-align: center;
+}
+
+.table-cell-head:last-child,
+.table-cell:last-child {
+    border-right: none;
+}
+
+
+/* ROW */
+
+.table-row {
+    border-bottom: 1px solid #ddd;
+    transition: 0.2s;
+    background: white;
+}
+
+.table-row:hover {
+    background: #f8f8f8;
+}
+
+
+/* BODY CELL */
+
+.table-cell {
+    color: #1e293b;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .schedule-title {
+        font-size: 18px;
+    }
+    .table-cell-head,
+    .table-cell {
+        font-size: 13px;
+        padding: 10px;
+    }
+    .table-wrapper {
+        max-height: 400px;
+    }
+}

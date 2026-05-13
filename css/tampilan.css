@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0b1120;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+/* HERO */
+
+.hero {
+    margin-top: 75px;
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .6)), url('../dasborfoto/innotech g24.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+
+/* GARIS BAWAH */
+
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient( to right, #00d9ff, #7b2cff, #00d9ff);
+    z-index: 10;
+}
+
+.bottom-title {
+    text-align: center;
+    animation: fadeUp 1s ease;
+}
+
+.bottom-title h1 {
+    color: #dbeafe;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.bottom-title h2 {
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: 700;
+    color: #60a5fa;
+    text-shadow: 0 0 10px rgba(96, 165, 250, .8), 0 0 20px rgba(128, 0, 255, 0), 0 0 40px rgba(59, 130, 246, .5);
+}
+
+
+/* BUTTON */
+
+.top-action {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 35px 0;
+}
+
+.top-action button {
+    padding: 12px 35px;
+    border: none;
+    border-radius: 14px;
+    background: #2563eb;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .3s;
+    margin-right: 10px;
+    /* jarak antar button */
+}
+
+.top-action button:hover {
+    transform: translateY(-5px);
+    background: #3b82f6;
+}
+
+.delete-selected-btn {
+    background: #dc2626;
+}
+
+.delete-selected-btn:hover {
+    background: #ef4444;
+}
+
+
+/* GALLERY */
+
+.gallery-section {
+    padding: 20px 5% 60px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: #111827;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: .4s;
+    border: 1px solid rgba(255, 255, 255, .08);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .4);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.delete-btn:hover {
+    transform: scale(1.1);
+}
+
+.delete-checkbox {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    z-index: 5;
+}
+
+
+/* LABEL */
+
+.label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 7px 14px;
+    border-radius: 50px;
+    font-size: .8rem;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+}
+
+.foto {
+    background: rgba(59, 130, 246, .85);
+}
+
+.video {
+    background: rgba(220, 38, 38, .85);
+}
+
+
+/* PLAY ICON */
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+
+/* CARD INFO */
+
+.card-info {
+    padding: 18px;
+    text-align: center;
+}
+
+.card-info h3 {
+    font-size: 1rem;
+    color: #f8fafc;
+}
+
+
+/* PREVIEW */
+
+.preview {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .95);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    padding: 20px;
+}
+
+.preview img,
+.preview video {
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 20px;
+}
+
+.preview video {
+    display: none;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+/* ANIMATION */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:1200px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width:900px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .bottom-title h2 {
+        font-size: 2.7rem;
+    }
+}
+
+@media(max-width:600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    .bottom-title h2 {
+        font-size: 2rem;
+    }
+}
+
+
+/* CONTAINER BOLA */
+
+.bg-balls {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+
+/* BOLA */
+
+.ball {
+    position: absolute;
+    bottom: -150px;
+    border-radius: 50%;
+    filter: blur(8px);
+    opacity: 0.5;
+    animation: floatUp linear infinite;
+}
+
+
+/* ANIMASI NAIK */
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0) scale(1);
+    }
+    to {
+        transform: translateY(-120vh) scale(1.2);
+    }
+}

@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0b1120;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+/* UPLOAD BUTTON */
+
+.upload-btn {
+    margin-left: auto;
+    background: rgba(4, 4, 200, 0.7);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.upload-btn:hover {
+    background: #0000af;
+    transform: translateY(-2px);
+}
+
+
+/* LOGO TITLE */
+
+.logo-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fffafa;
+    letter-spacing: .5px;
+}
+
+
+/* HEADER */
+
+.topbar {
+    width: 100%;
+    padding: 18px 30px;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    /* GARIS BAWAH */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.358);
+}
+
+
+/* BACK BUTTON */
+
+.back-btn {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(4, 4, 200, 0.7);
+    backdrop-filter: blur(10px);
+    color: #f9f9f9;
+    padding: 12px 20px;
+    border-radius: 14px;
+    font-weight: 600;
+    font-size: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition: all .3s ease;
+}
+
+.back-btn:hover {
+    transform: translateY(-2px);
+    background: #0000af;
+    color: rgb(255, 255, 255);
+}
+
+.back-btn span {
+    font-size: 18px;
+    transition: .3s;
+}
+
+.back-btn:hover span {
+    transform: translateX(-4px);
+}
+
+.topbar h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #fffdfd;
+}
+
+
+/* CONTENT */
+
+.container {
+    padding: 40px;
+}
+
+
+/* TITLE */
+
+.folder-title {
+    margin-bottom: 30px;
+}
+
+.folder-title h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    color: #fffcfc;
+}
+
+.folder-title p {
+    color: #fff9f9;
+    font-size: 18px;
+}
+
+
+/* GRID */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    align-items: stretch;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform .25s ease, box-shadow .25s ease;
+    position: relative;
+}
+
+.gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-item img,
+.gallery-item video {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+}
+
+.gallery-item-footer {
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: #f7f8fb;
+}
+
+.media-type {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111827;
+    text-transform: uppercase;
+}
+
+.delete-btn {
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: #ef4444;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background .2s ease;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+}
+
+@media (max-width: 768px) {
+    .gallery-item img,
+    .gallery-item video {
+        height: 190px;
+    }
+}
+
+/* CARD */
+
+.media-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.media-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* FOTO & VIDEO */
+
+.media-card img,
+.media-card video {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .media-card img,
+    .media-card video {
+        height: 220px;
+    }
+}
+
+
+/* PREVIEW */
+
+.preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.preview img {
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 15px;
+}
+
+
+/* CLOSE */
+
+.close-preview {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 45px;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* BODY */
+
+body {
+    background: #020617;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+/* BACKGROUND ANIMATION */
+
+.bg-animation {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+
+/* BALL */
+
+.ball {
+    position: absolute;
+    bottom: -200px;
+    border-radius: 50%;
+    filter: blur(5px);
+    animation: floatUp linear infinite;
+    -webkit-filter: blur(5px);
+}
+
+
+/* BALL COLORS */
+
+.ball1 {
+    width: 260px;
+    height: 260px;
+    left: 5%;
+    background: rgba(59, 130, 246, 0.35);
+    animation-duration: 18s;
+}
+
+.ball2 {
+    width: 180px;
+    height: 180px;
+    left: 25%;
+    background: rgba(168, 85, 247, 0.3);
+    animation-duration: 14s;
+}
+
+.ball3 {
+    width: 220px;
+    height: 220px;
+    left: 55%;
+    background: rgba(6, 182, 212, 0.25);
+    animation-duration: 20s;
+}
+
+.ball4 {
+    width: 300px;
+    height: 300px;
+    left: 75%;
+    background: rgba(147, 51, 234, 0.25);
+    animation-duration: 22s;
+}
+
+.ball5 {
+    width: 160px;
+    height: 160px;
+    left: 90%;
+    background: rgba(34, 211, 238, 0.25);
+    animation-duration: 16s;
+}
+
+.ball6 {
+    width: 160px;
+    height: 160px;
+    left: 90%;
+    background: rgba(55, 219, 169, 0.25);
+    animation-duration: 16s;
+}
+
+.ball7 {
+    width: 160px;
+    height: 160px;
+    left: 90%;
+    background: rgba(157, 14, 229, 0.25);
+    animation-duration: 16s;
+}
+
+.ball8 {
+    width: 160px;
+    height: 160px;
+    left: 90%;
+    background: rgba(27, 2, 254, 0.571);
+    animation-duration: 16s;
+}
+
+.ball9 {
+    width: 160px;
+    height: 160px;
+    left: 90%;
+    background: rgba(4, 0, 230, 0.25);
+    animation-duration: 16s;
+}
+
+.ball10 {
+    width: 160px;
+    height: 160px;
+    left: 90%;
+    background: rgba(0, 192, 221, 0.503);
+    animation-duration: 16s;
+}
+
+
+/* ANIMATION */
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        /* BERHENTI DI GARIS TOPBAR */
+        transform: translateY(calc(-100vh + 110px));
+        opacity: 0;
+    }
+}
